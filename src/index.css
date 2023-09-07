@@ -120,6 +120,7 @@ nav {
   width: 100%;
   justify-content: space-around;
   scroll-margin-left: 0;
+  margin-bottom: 10px;;
 }
 
 .nav-button {
@@ -131,7 +132,7 @@ nav {
   border-radius: 5px;
   width:140px;
   text-align: center;
-  margin-bottom: 5px;
+  /* margin-bottom: px; */
 }
 
 .nav-button:hover{
@@ -306,7 +307,18 @@ input{
   color:#3A4862 ;
 }
 
+.new-game{
+  width:100vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
 
+.characterQuestions{
+  display: flex;
+  flex-direction: column;
+}
 
 
 

@@ -4,8 +4,9 @@ import CreatePlayer from '../components/CreatePlayer'
 const NewGameContainer = () => {
     return (
         <>
-        <div>NewGameContainer</div>
+        <div className='new-game'>
         <CreatePlayer/>
+        </div>
         </>
     )
 }

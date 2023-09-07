@@ -12,13 +12,13 @@ const CreatePlayer = () => {
 
   return (
     <div className='characterQuestions'>
-      <h4>Enter Player Name:</h4>
+      <label>Enter Player Name:</label>
       <input
         type="text"
         value={playerName}
         onChange={handlePlayerNameChange}
       />
-      <button onClick={() => request.createPlayer(playerName)}>Create Player</button>
+      <button className='button'onClick={() => request.createPlayer(playerName)}>Create Player</button>
     </div>
   );
 }
