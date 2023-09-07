@@ -17,8 +17,8 @@ export default function NewGame({ user, player, setGame }) {
 
   return (
     <main>
-      <h2>This is where a new game starts!</h2>
-      <button onClick={handleSubmit}>Start Game</button>
+      
+      <button className='button' onClick={handleSubmit}>Start Game</button>
     </main>
   );
 }
