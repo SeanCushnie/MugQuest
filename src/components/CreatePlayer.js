@@ -18,12 +18,14 @@ const CreatePlayer = ({setPlayer}) => {
 
   return (
     <div className='characterQuestions'>
-      <label>Enter Player Name:</label>
+      <div className='character-input'>
+      <label>Enter Player Name: </label>
       <input
         type="text"
         value={playerName}
         onChange={handlePlayerNameChange}
       />
+      </div>
 
       <button className='button' onClick={handleClick}>Create Player</button>
 
