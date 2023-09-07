@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import request from '../Helpers/request';
 
-const CreatePlayer = () => {
+const CreatePlayer = ({setPlayer}) => {
   const [playerName, setPlayerName] = useState('');
+
+
+  
 
   const handlePlayerNameChange = (e) => {
     setPlayerName(e.target.value);
   };
 
-  
+  const handleClick = async () => {
+    const player = await request.createPlayer(playerName)
+    setPlayer(player);
+  }
 
   return (
     <div className='characterQuestions'>
@@ -18,7 +24,7 @@ const CreatePlayer = () => {
         value={playerName}
         onChange={handlePlayerNameChange}
       />
-      <button onClick={() => request.createPlayer(playerName)}>Create Player</button>
+      <button onClick={handleClick}>Create Player</button>
     </div>
   );
 }

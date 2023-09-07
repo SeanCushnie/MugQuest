@@ -1,11 +1,11 @@
 import React from 'react'
 import CreatePlayer from '../components/CreatePlayer'
 
-const NewGameContainer = () => {
+const NewGameContainer = ({setPlayer}) => {
     return (
         <>
         <div>NewGameContainer</div>
-        <CreatePlayer/>
+        <CreatePlayer setPlayer = {setPlayer} />
         </>
     )
 }
