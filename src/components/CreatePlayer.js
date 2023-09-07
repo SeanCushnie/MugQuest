@@ -3,6 +3,7 @@ import request from '../Helpers/request';
 
 const CreatePlayer = ({setPlayer}) => {
   const [playerName, setPlayerName] = useState('');
+  const [isButtonClicked, setButtonClicked] = useState(false)
 
 
   
@@ -14,6 +15,7 @@ const CreatePlayer = ({setPlayer}) => {
   const handleClick = async () => {
     const player = await request.createPlayer(playerName)
     setPlayer(player);
+    setButtonClicked(true);
   }
 
   return (
@@ -27,7 +29,7 @@ const CreatePlayer = ({setPlayer}) => {
       />
       </div>
 
-      <button className='button' onClick={handleClick}>Create Player</button>
+      <button className='button' onClick={handleClick} disabled={isButtonClicked}>Create Player</button>
 
     </div>
   );

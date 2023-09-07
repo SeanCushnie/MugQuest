@@ -351,6 +351,22 @@ animation: linearGradientMove .3s infinite linear;
   margin-bottom: 20px;
 }
 
+/* .player-button {
+  background-color: #FCB3B3;
+  color: #3A4862;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 5px;
+  width:fit-content;
+}
+
+.player-button:hover{
+  background-color: white;
+}
+
+.player-button:active{
+
+} */
 
 
 
