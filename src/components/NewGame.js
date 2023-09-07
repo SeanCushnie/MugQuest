@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function NewGame({ user, player }) {
+export default function NewGame({ user, player, setGame }) {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
