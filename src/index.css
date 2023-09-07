@@ -85,6 +85,11 @@ body {
   /* padding: 0px 20px */
 }
 
+.option-list{
+  display:flex;
+  
+}
+
 .narrative {
   /* width: 40vw; */
   color: #3A4862;

@@ -10,7 +10,7 @@ const OptionList = ({ game, showResult, setShowResult, selectedOption, handleOpt
   const OptionsElements = currentOptions.map((option, index) => {
     return (
       <ul key={index}>
-        <button className='button' onClick={() => handleOptionClick(option)}>
+        <button className='choices' onClick={() => handleOptionClick(option)}>
           {option.dialogue}
         </button>
       </ul>
@@ -18,7 +18,7 @@ const OptionList = ({ game, showResult, setShowResult, selectedOption, handleOpt
   });
 
   return (
-    <div>
+    <div className='choices'>
       {!showResult && <div>{OptionsElements}</div>}
       {showResult && <Result game={game} selectedOption={selectedOption} />}
     </div>
