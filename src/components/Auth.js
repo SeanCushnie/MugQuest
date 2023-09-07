@@ -9,9 +9,6 @@ export const Auth = ({setUserEmail}) => {
     const [user, setUser] = useState(auth.currentUser);
 
 
-    
-    
-
     useEffect(() => {
         const refresh = auth.onAuthStateChanged(user => {
             setUser(user);
