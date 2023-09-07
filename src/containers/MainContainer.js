@@ -11,14 +11,13 @@ const MainContainer = () => {
     const [userEmail, setUserEmail] = useState("");
 
     return (
-        <div>
-            <h1>Main Container</h1>
+        <div className="main-container">
             <Router>
-                <NavBar />
                 <Routes>
                     <Route element={<HomeContainer setUserEmail={setUserEmail} />} path="/" />
                     <Route element ={<NewGameContainer userEmail = {userEmail} />} path="/new"/>
                 </Routes>
+                <NavBar />
             </Router>
         </div>
     );

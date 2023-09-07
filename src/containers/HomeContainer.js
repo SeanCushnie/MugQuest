@@ -7,7 +7,7 @@ export const HomeContainer = ({setUserEmail}) => {
 
 
     return (
-        <div>
+        <div className='home-page'>
             <Auth setUserEmail={setUserEmail} />
             <Hero/>
         </div>
