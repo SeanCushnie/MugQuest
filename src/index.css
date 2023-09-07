@@ -428,6 +428,26 @@ animation: linearGradientMove .3s infinite linear;
 
 } */
 
+.log-out{
+  height: fit-content;
+  padding: 20px;
+  background: 
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y;
+background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+background-position: 0 0, 0 100%, 0 0, 100% 0;
+border-radius: 10px;
+animation: linearGradientMove .3s infinite linear;
+}
+
+@keyframes linearGradientMove {
+100% {
+  background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
+}
+
+}
 
 
 

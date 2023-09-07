@@ -8,8 +8,8 @@ const NavBar = () => {
         <Link className='nav-button' to='/'>HOME</Link>
         <Link className='nav-button' to='/new'>NEW GAME</Link>
         <button className="nav-button">LOAD GAME</button>
-        <button className="nav-button">SAVE</button>
-        <button className="nav-button" >LOG OUT</button>
+        <button className="nav-button">SAVE</button> 
+        {/* <button className="nav-button">LOG OUT</button> */}
 
     </nav>
   )
