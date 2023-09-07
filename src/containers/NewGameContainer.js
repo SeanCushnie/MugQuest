@@ -2,7 +2,7 @@ import React from 'react'
 import CreatePlayer from '../components/CreatePlayer'
 import NewGame from '../components/NewGame'
 
-const NewGameContainer = ({setPlayer, user, player}) => {
+const NewGameContainer = ({setPlayer, user, player, setGame}) => {
     return (
         <>
 
@@ -11,7 +11,7 @@ const NewGameContainer = ({setPlayer, user, player}) => {
 
         <div>NewGameContainer</div>
         <CreatePlayer setPlayer = {setPlayer} />
-        <NewGame player = {player} user = {user}/>
+        <NewGame player = {player} user = {user} setGame={setGame}/>
         </div>
 
         </>
