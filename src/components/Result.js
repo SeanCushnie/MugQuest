@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import OptionList from './OptionList';
 
-export default function Result({ selectedOption, games, showResult }) {
+export default function Result({ selectedOption, game, showResult }) {
 
     const [responseText, setResponseText] = useState('');
     const [showOptionsList, setShowOptionsList] = useState(false);
@@ -19,7 +19,7 @@ export default function Result({ selectedOption, games, showResult }) {
   return (
     <div>
       {!showOptionsList && responseText && <p>{responseText}</p>}
-      {showOptionsList && <OptionList games={games}
+      {showOptionsList && <OptionList game={game}
         //   onResultSelected={showResultAndHideOptions}
           showResult={showResult} selectedOption={selectedOption} />}
       <button onClick={handleContinueClick}>Continue</button>

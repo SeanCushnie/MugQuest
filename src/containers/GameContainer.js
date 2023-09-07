@@ -1,21 +1,35 @@
-import React from 'react'
-import Narrative from '../components/Narrative'
-import OptionList from '../components/OptionList'
-import {useState} from 'react';
+import React, { useState } from 'react';
+import OptionList from '../components/OptionList';
+import Narrative from '../components/Narrative';
+import Result from '../components/Result';
 
-const GameContainer = ({game, location, user}) => {
+const GameContainer = ({ game, location, user }) => {
 
-    const [showResult, setShowResult] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(null);
+  const [showResult, setShowResult] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
 
-    return (
-        <>
-        <div>GameContainer</div>
-        <Narrative user={user} game = {game} location = {location}/>
-        {!showResult && (
-        <OptionList game={game} showResult={showResult} setShowResult={setShowResult} />)}
-        </>
-    )
-}
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setShowResult(true);
+  };
 
-export default GameContainer
+  return (
+    <>
+    <div className='game-area'>
+      <Narrative user={user} game={game} location={location} />
+      
+        <OptionList
+          game={game}
+          showResult={showResult}
+          setShowResult={setShowResult}
+          selectedOption={selectedOption}
+          handleOptionClick={handleOptionClick}
+        />
+
+        {/* <Result /> */}
+      
+      </div>
+    </>
+  );
+};
+export default GameContainer;
