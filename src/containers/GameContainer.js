@@ -6,6 +6,7 @@ import {useState} from 'react';
 const GameContainer = ({game, location, user}) => {
 
     const [showResult, setShowResult] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
 
     return (
         <>

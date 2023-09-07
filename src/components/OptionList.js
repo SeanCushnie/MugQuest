@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-// import Result from './result'
+import Result from './Result';
+
 
 
 const OptionList = ({game, showResult, setShowResult}) => {
@@ -32,6 +33,7 @@ const OptionList = ({game, showResult, setShowResult}) => {
     {!showResult && (
         <div>{OptionsElements}</div>
     )}
+    {showResult && <Result game={game} selectedOption={selectedOption}/>}
     </div>
   )
 }
