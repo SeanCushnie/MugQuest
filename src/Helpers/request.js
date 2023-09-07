@@ -19,9 +19,9 @@ const request = {
         console.error('Error creating player:', err);
       }
     },
-  };
 
-  const getUser = (userEmail) => {
+
+  getUser: (userEmail) => {
     fetch(`/api/users?email=${userEmail}`)
     .then((response) => {
       return response.json();
@@ -29,12 +29,13 @@ const request = {
     .then((data) => {
       console.log(data);
     })
+    
     .catch((error) => {
       console.error("Error fetching user", error);
     })
   }
 
-
+};
   
 export default request;
   
