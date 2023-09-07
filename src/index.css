@@ -77,8 +77,23 @@ body {
 
 .game-area{
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* align-items: center; */
+  width:100vw;
+  margin: auto;
+  /* padding: 0px 20px */
+}
+
+.game-content{
   width:50vw;
-  padding: 0px 20px
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin:auto;
+  margin-top: 100px;;
+  
 }
 
 .narrative {
@@ -90,12 +105,36 @@ body {
   margin: auto;
   font-size: small;
 
+
 }
 
 .choices {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+}
 
+.choices-list{
+  width:40vw;
+  margin-top: 100px;
+  padding-top: -10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background: 
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y;
+background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+background-position: 0 0, 0 100%, 0 0, 100% 0;
+border-radius: 5px;
+animation: linearGradientMove .3s infinite linear;
+}
+
+@keyframes linearGradientMove {
+100% {
+  background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
+}
 }
 
 .button {
@@ -148,8 +187,11 @@ nav {
   cursor: pointer;
 }
 
-.options > li:hover{
+.options:hover{
   color: white;
+  /* border:solid white;
+  border-radius: 5px;
+  padding: 5px; */
 }
 
 

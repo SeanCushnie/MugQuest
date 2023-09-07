@@ -9,12 +9,16 @@ const GameContainer = ({game, location, user}) => {
     const [selectedOption, setSelectedOption] = useState(null);
 
     return (
-        <>
-        <div>GameContainer</div>
+        <div className='game-area'>
+        <div className='game-content'>
+
         <Narrative user={user} game = {game} location = {location}/>
+        <div className='choices-list'>
         {!showResult && (
         <OptionList game={game} showResult={showResult} setShowResult={setShowResult} />)}
-        </>
+        </div>
+        </div>
+        </div>
     )
 }
 

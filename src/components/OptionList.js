@@ -20,7 +20,7 @@ const OptionList = ({game, showResult, setShowResult}) => {
     const OptionsElements = currentOptions.map((option, index) => {
         return(
         <ul key={index}>
-            <button className='button' onClick={() => handleOptionClick(option)}>
+            <button className='options' onClick={() => handleOptionClick(option)}>
             {option.dialogue}
             </button>              
         </ul>)
