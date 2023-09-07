@@ -75,6 +75,7 @@ body {
 
 }
 
+
 .game-area{
   flex-direction: column;
   justify-content: center;
@@ -93,7 +94,6 @@ body {
   align-items:center;
   margin:auto;
   margin-top: 100px;;
-  
 }
 
 .narrative {
@@ -104,8 +104,6 @@ body {
   padding: 20px;
   margin: auto;
   font-size: small;
-
-
 }
 
 .choices {
@@ -410,6 +408,8 @@ animation: linearGradientMove .3s infinite linear;
 .character-input{
   margin-bottom: 20px;
 }
+
+
 
 /* .player-button {
   background-color: #FCB3B3;

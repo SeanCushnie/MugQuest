@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Result from './Result';
 
-
-
-const OptionList = ({game, showResult, setShowResult}) => {
+const OptionList = ({ game, showResult, setShowResult, selectedOption, handleOptionClick }) => {
 
     const [selectedOption, setSelectedOption] = useState(null);
 
@@ -28,14 +26,10 @@ const OptionList = ({game, showResult, setShowResult}) => {
 
 
   return (
-
-    <div>
-    {!showResult && (
-        <div>{OptionsElements}</div>
-    )}
-    {showResult && <Result game={game} selectedOption={selectedOption}/>}
+    <div className='choices'>
+      {!showResult && <div>{OptionsElements}</div>}
+      {showResult && <Result game={game} selectedOption={selectedOption} />}
     </div>
-  )
-}
-
-export default OptionList
+  );
+};
+export default OptionList;
