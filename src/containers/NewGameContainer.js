@@ -1,12 +1,19 @@
 import React from 'react'
 import CreatePlayer from '../components/CreatePlayer'
+import NewGame from '../components/NewGame'
 
-const NewGameContainer = () => {
+const NewGameContainer = ({setPlayer, user, player}) => {
     return (
         <>
+
         <div className='new-game'>
-        <CreatePlayer/>
+
+
+        <div>NewGameContainer</div>
+        <CreatePlayer setPlayer = {setPlayer} />
+        <NewGame player = {player} user = {user}/>
         </div>
+
         </>
     )
 }
