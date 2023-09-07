@@ -1,3 +1,7 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,297 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */ 
+
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  display:flex;
+  align-content: center;
+  flex-direction: column;
+  margin:0px;
+  padding: 10px;
+  background-color: #3A4862;
+  color: #FCB3B3;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.Title{
+  display: flex;
+  position: absolute;
+  width: 70%;
+  margin: auto;
+}
+
+.main-container{
+  display:flex;
+  flex-direction: row;
+  align-content: space-between;
+
+}
+
+.game-area{
+  flex-direction: column;
+  width:50vw;
+  padding: 0px 20px
+}
+
+.narrative {
+  /* width: 40vw; */
+  color: #3A4862;
+  background-color: #FCB3B3;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+  font-size: small;
+
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.button {
+  background-color: #FCB3B3;
+  color: #3A4862;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 5px;
+  width:fit-content;
+}
+
+.button:hover{
+  background-color: white;
+}
+
+
+.nav-button {
+  background-color: #FCB3B3;
+  color: #3A4862;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 5px;
+  width:140px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.nav-button:hover{
+  background-color: white;
+}
+
+
+.options{
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.options > li:hover{
+  color: white;
+}
+
+
+
+/* .inventory{
+  width: 500px;;
+} */
+
+.inventory-list{
+  border:solid #FCB3B3 ;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.inventory-item{
+  padding: 5px;
+  cursor: pointer;
+  width:fit-content;
+}
+
+.inventory-item:hover{
+  color:white;
+  border:solid white ;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+.collapsable-list{
+  margin-right: 10px;
+}
+
+.ascii-image{
+  border: solid #FCB3B3;
+  border-radius: 5px;
+}
+
+.ascii{
+  color: #FCB3B3;
+}
+
+.left-side-col{
+  min-width: 30vw;
+}
+
+.ascii-image-container{
+  margin-bottom: 10px;
+
+  /* outline: 1px solid #3A4862; */
+  /* border:solid #FCB3B3; */
+  background: 
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y,
+  linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y;
+background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+background-position: 0 0, 0 100%, 0 0, 100% 0;
+border-radius: 5px;
+animation: linearGradientMove .3s infinite linear;
+}
+
+@keyframes linearGradientMove {
+100% {
+  background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
+}
+  
+}
+
+.label{
+  background-color: #FCB3B3;
+  color:#3A4862;
+  border-radius: 5px;
+  padding: 5px 20px;
+  width:fit-content;
+  /* margin-bottom: -2px;
+  margin-left: -2px; */
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width:auto;
+  align-items: start;
+}
+
+.sign-in{
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23FCB3B3FF' stroke-width='4' stroke-dasharray='10%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px; */
+  height: fit-content;
+  background: 
+        linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y;
+    background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    border-radius: 10px;
+  animation: linearGradientMove .3s infinite linear;
+  animation-direction: reverse;
+}
+
+@keyframes linearGradientMove {
+    100% {
+        background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
+    }
+}
+
+
+.sign-in-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-top: 15px;
+  /* width:fit-content; */
+}
+
+.home-page{
+  display:flex;
+  flex-direction: row;
+}
+
+.hero{
+  display:flex;
+  justify-content: center;
+
+}
+
+
+
+.mug-quest{
+  padding:20px;
+  width: 60vh;
+  /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23FCB3B3FF' stroke-width='4' stroke-dasharray='10%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px;   */
+  background: 
+        linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, #FCB3B3 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, #FCB3B3 50%, transparent 0) repeat-y;
+    background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    border-radius: 10px;
+  animation: linearGradientMove .3s infinite linear;
+}
+
+@keyframes linearGradientMove {
+    100% {
+        background-position: 20px 0, -20px 100%, 0 -20px, 100% 20px;
+    }
+}
+
+input{
+  color:#3A4862 ;
+}
+
+
+
+
+
+
+
