@@ -47,6 +47,29 @@ const request = {
         console.log(data);
       });
   },
+
+  createGame: async (userId, playerId) => {
+    try {
+      const response = await fetch("http://localhost:8080/api/games", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: userId, playerId: playerId }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        return data;
+      } else {
+        const errorData = await response.json();
+        console.error("Error creating game:", errorData);
+      }
+    } catch (err) {
+      console.error("Error creating game:", err);
+    }
+  }
+
 };
 
 export default request;
