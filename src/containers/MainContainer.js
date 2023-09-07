@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import HomeContainer from "../containers/HomeContainer";
 import NewGameContainer from "./NewGameContainer";
 import request from "../Helpers/request";
+import GameContainer from "./GameContainer";
 
 
 const MainContainer = () => {
@@ -27,7 +28,8 @@ const MainContainer = () => {
                 <NavBar />
                 <Routes>
                     <Route element={<HomeContainer setUserEmail={setUserEmail} setUserDetails={setUser} />} path="/" />
-                    <Route element={<NewGameContainer userEmail={userEmail} setPlayer = {setPlayer}/>} path="/new" />
+                    <Route element={<NewGameContainer userEmail={userEmail} setPlayer = {setPlayer} user = {user} player = {player}/>} path="/new" />
+                    <Route element={<GameContainer user={user} player={player}/>} path="/play"/>
                 </Routes>
             </Router>
         </div>
