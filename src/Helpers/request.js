@@ -20,6 +20,21 @@ const request = {
       }
     },
   };
+
+  const getUser = (userEmail) => {
+    fetch(`/api/users?email=${userEmail}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching user", error);
+    })
+  }
+
+
   
-  export default request;
+export default request;
   
