@@ -22,15 +22,14 @@ const MainContainer = () => {
     // }, [userEmail])
 
     return (
-        <div>
-            <h1>Main Container</h1>
+        <div className="main-container">
             <Router>
-                <NavBar />
                 <Routes>
                     <Route element={<HomeContainer setUserEmail={setUserEmail} setUserDetails={setUser} />} path="/" />
                     <Route element={<NewGameContainer userEmail={userEmail} setPlayer = {setPlayer} user = {user} player = {player}/>} path="/new" />
                     <Route element={<GameContainer user={user} player={player}/>} path="/play"/>
                 </Routes>
+                <NavBar />
             </Router>
         </div>
     );
