@@ -3,7 +3,7 @@ import OptionList from '../components/OptionList';
 import Narrative from '../components/Narrative';
 import Result from '../components/Result';
 
-const GameContainer = ({ game, location, user }) => {
+const GameContainer = ({ game, setGame, location, user }) => {
 
   const [showResult, setShowResult] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -11,12 +11,15 @@ const GameContainer = ({ game, location, user }) => {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setShowResult(true);
+    const updateGame = game;
+    updateGame.player.selectedDialogueOptions.push(option);
+    setGame(updateGame);
   };
 
   return (
     <>
     <div className='game-area'>
-      <Narrative user={user} game={game} location={location} />
+      <Narrative user={user} game={game} setGame={setGame} location={location} />
       
         <OptionList
           game={game}

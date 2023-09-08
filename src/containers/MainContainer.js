@@ -16,12 +16,7 @@ const MainContainer = () => {
     const [game, setGame] = useState({});
     const [location, setLocation] = useState({});
 
-    // useEffect(() => {
-    //     if (userEmail) {
-    //         const user = request.getUser(userEmail);
-    //         setUser(user);
-    //     }
-    // }, [userEmail])
+
 
     return (
         <div className="main-container">
@@ -29,7 +24,7 @@ const MainContainer = () => {
                 <Routes>
                     <Route element={<HomeContainer setUserEmail={setUserEmail} setUserDetails={setUser} />} path="/" />
                     <Route element={<NewGameContainer userEmail={userEmail} setPlayer = {setPlayer} user = {user} player = {player} setGame={setGame}/>} path="/new" />
-                    <Route element={<GameContainer game={game} location={location} setLocation={setLocation} user={user} player={player}/>} path="/play"/>
+                    <Route element={<GameContainer game={game} setGame={setGame} location={location} setLocation={setLocation} user={user} player={player}/>} path="/play"/>
                 </Routes>
                 <NavBar />
             </Router>

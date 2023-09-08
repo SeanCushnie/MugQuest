@@ -1,35 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import OptionList from './OptionList';
+import React, { useEffect, useState } from "react";
+import OptionList from "./OptionList";
 
-export default function Result({ selectedOption, game, showResult }) {
+export default function Result({ selectedOption, game, showResult, setShowResult }) {
+  const [responseText, setResponseText] = useState("");
+  const [showOptionsList, setShowOptionsList] = useState(false);
 
-    const [responseText, setResponseText] = useState('');
-    const [showOptionsList, setShowOptionsList] = useState(false);
-
-    useEffect(() => {
+  useEffect(() => {
     if (selectedOption) {
-        setResponseText(selectedOption.responseText);
-        }
-    }, [selectedOption]);
+      setResponseText(selectedOption.responseText);
+    }
+  }, [selectedOption]);
 
-    const handleContinueClick = () => {
-        setShowOptionsList(true);
-    };
+  const handleContinueClick = () => {
+    setShowResult(false)
+  };
 
   return (
     <div>
-      {!showOptionsList && responseText && <p>{responseText}</p>}
-      {showOptionsList && <OptionList game={game}
-        //   onResultSelected={showResultAndHideOptions}
-          showResult={showResult} selectedOption={selectedOption} />}
+      <p>{responseText}</p>
       <button onClick={handleContinueClick}>Continue</button>
     </div>
   );
 }
-
-
-
-
-
-
-

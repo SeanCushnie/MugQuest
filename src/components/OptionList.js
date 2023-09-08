@@ -1,26 +1,43 @@
 import React from 'react';
 import Result from './Result';
+import Option from './Option';
 
-const OptionList = ({ game, showResult, setShowResult, selectedOption, handleOptionClick }) => {
+const OptionList = ({ game, setGame, showResult, setShowResult, selectedOption, handleOptionClick }) => {
+    
+    const unselectedOptions = game.location.dialogueOptions.filter(option => 
+      !game.player.selectedDialogueOptions?.includes(option)
+    )
 
-  const currentOptions = game.location.dialogueOptions.filter((dialogueOption) => {
-    return !dialogueOption.previousId;
+    console.log(unselectedOptions)
+
+  const currentOptions = unselectedOptions.filter((option) => {
+    return !option.previousId || game.player.selectedDialogueOptions?.some(opt => opt.nextId === option.id)
   });
+
+  console.log(currentOptions)
+
+  const handleClick = (option) => {
+    console.log(option);
+    handleOptionClick(option);
+    
+  }
 
   const OptionsElements = currentOptions.map((option, index) => {
     return (
-      <ul key={index}>
-        <button className='choices' onClick={() => handleOptionClick(option)}>
-          {option.dialogue}
-        </button>
-      </ul>
+      
+        <Option key={index} handleClick={handleClick} option={option} index={index}/>
+
     );
   });
 
+
+
   return (
     <div className='choices'>
-      {!showResult && <div>{OptionsElements}</div>}
-      {showResult && <Result game={game} selectedOption={selectedOption} />}
+
+      {!showResult && <div>{OptionsElements}</div>} 
+
+      {showResult && <Result game={game} selectedOption={selectedOption} setShowResult={setShowResult} />}
     </div>
   );
 };
