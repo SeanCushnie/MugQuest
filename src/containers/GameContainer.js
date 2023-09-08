@@ -37,21 +37,10 @@ const GameContainer = ({ game, setGame, location, user }) => {
         {/* <Result /> */}
       
       </div>
+      </div>
     </>
 
-//Old return commented out as I'm not sure if it's the correct one or not
-//     return (
-       
 
-//         <Narrative user={user} game = {game} location = {location}/>
-//         <div className='choices-list'>
-//         {!showResult && (
-//         <OptionList game={game} showResult={showResult} setShowResult={setShowResult} />)}
-//         </div>
-//         </div>
-//         </div>
-//     )
-// }
   );
 };
 export default GameContainer;
