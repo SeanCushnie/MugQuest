@@ -35,7 +35,7 @@ const OptionList = ({ game, setGame, showResult, setShowResult, selectedOption, 
 
 
   return (
-    <div className='choices'>
+    <div className='choices-list'>
 
       {!showResult && <div>{OptionsElements}</div>} 
 

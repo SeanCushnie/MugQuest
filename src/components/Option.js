@@ -3,7 +3,7 @@ import React from 'react'
 const Option = ({handleClick, option, index}) => {
   return (
 
-        <button className='choices' value={option} onClick={() => handleClick(option)}>
+        <button className='options' value={option} onClick={() => handleClick(option)}>
           {option.dialogue}
         </button>
 

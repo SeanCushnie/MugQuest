@@ -16,9 +16,11 @@ export default function Result({ selectedOption, game, showResult, setShowResult
   };
 
   return (
-    <div>
-      <p>{responseText}</p>
-      <button onClick={handleContinueClick}>Continue</button>
+    <div className="result">
+        <div className="result-text">
+            <p>{responseText}</p>
+        </div>
+        <button className='button' onClick={handleContinueClick}>Continue</button>
     </div>
   );
 }

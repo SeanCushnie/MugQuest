@@ -449,5 +449,17 @@ animation: linearGradientMove .3s infinite linear;
 
 }
 
+.result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin:auto;
+}
+
+.result-text{
+  padding-bottom: 20px;
+}
 
 
