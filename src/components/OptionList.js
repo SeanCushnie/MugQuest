@@ -8,6 +8,7 @@ const OptionList = ({ game, setGame, showResult, setShowResult, selectedOption, 
       !game.player.selectedDialogueOptions?.includes(option)
     )
 
+
     console.log(unselectedOptions)
 
   const currentOptions = unselectedOptions.filter((option) => {
@@ -29,6 +30,7 @@ const OptionList = ({ game, setGame, showResult, setShowResult, selectedOption, 
 
     );
   });
+
 
 
 

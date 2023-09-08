@@ -89,8 +89,8 @@ export const Auth = ({ setUserEmail, setUserDetails }) => {
     );
   } else {
     return (
-      <div>
-        <button onClick={logout}>Log Out</button>
+      <div className="log-out">
+        <button className='button' onClick={logout}>Log Out</button>
       </div>
     );
   }
